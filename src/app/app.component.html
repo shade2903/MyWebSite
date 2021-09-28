@@ -8,7 +8,17 @@
 
 <mat-drawer-container  autosize>
   <mat-drawer #drawer  mode="side" opened = "true">
-    <p>Auto-resizing sidenav</p>
-         Toggle extra text    
+    <mat-selection-list  [multiple]="false" (selectionChange)="loadRecepies($event.option.value)">
+      <mat-list-option *ngFor="let category of categories" [value]="category.id">
+        {{category.name}}
+      </mat-list-option>
+    </mat-selection-list>
   </mat-drawer> 
+
+  <mat-grid-list cols="2" rowHeight="100%">
+    <mat-grid-tile *ngFor="let recipe of recipies">
+      <app-recipe [recipe]="recipe"></app-recipe>
+    </mat-grid-tile>  
+  </mat-grid-list>
+
 </mat-drawer-container>

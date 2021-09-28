@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "categories" : [1],
+      "name" : "test",
+      "ingredients" : [
+          {"unit" : "kg",
+           "value" : 12,
+          "name"  : "Apple"
+          }
+      ],
+      "description" : "Bla-bla-bla",
+      "cookingtime" : "30min",
+      "image_url" : "https://image.freepik.com/free-photo/red-apple-in-a-plate-isolated-on-a-white-background_55883-2090.jpg",
+      "calories" : 1225
+    }
+]
